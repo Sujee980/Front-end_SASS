@@ -1,0 +1,199 @@
+$color_1 : #05253C;
+$color_2 : #DBDBDB;
+$color_3 : #FF0000;
+$color_4 : #EBEBEB;
+$background-color_1: #FFFFFF;
+$background-color_2: #FFDC47;
+$font-family_1: 'Manrope', sans-serif;
+$font-family_2: 'Plus Jakarta Sans', sans-serif;
+
+@mixin commun{
+    margin-left: 139px;
+    text-align: left;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+@mixin label{
+    font-family: $font-family_2;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color_1;
+    height: 21px;
+
+}
+@mixin placeholder{
+    height: 15px;
+    font-family: $font-family_2;
+    color: $color_2;
+    font-size: 12px;
+    font-weight:500;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: $background-color_1;
+    opacity: 1;    
+}
+
+body{
+    width: 1366px;
+    height:768px;
+}
+
+img{
+    height: 76px;
+    width: 76px;
+    margin-top: 81px;
+    margin-bottom: 31px;
+    padding-left: 139px;
+}
+
+h1{
+    size: 40px;
+    height: 55px;
+    margin-bottom: 30px;
+    width: 471px;
+    line-height: 52px;
+    font-family: $font-family_1;
+    font-weight: 200;
+    color: $color_1;
+    @include commun;   
+ }
+
+label[for=fname]{
+    width: 89px;
+    @include label;
+    @include commun;
+}
+
+#firstname{
+    margin-top: 18px;
+    margin-bottom: 10px;
+    &::placeholder{
+        width: 155px;
+        @include commun;
+        @include placeholder;
+    }    
+}
+
+label[for=lname]{
+    width: 88px;
+    @include label;
+    @include commun;
+}
+
+#lastname{
+    margin-top: 18px;
+    margin-bottom: 10px;
+    &::placeholder{
+        width: 154px;
+        @include commun;
+        @include placeholder;
+    }
+}
+
+label[for=email_label]{
+    width: 115px;
+    @include label;
+    @include commun;  
+}
+
+#email{
+    margin-top: 18px;
+    margin-bottom: 10px;
+    &::placeholder{
+        width: 179px;
+        @include commun;
+        @include placeholder;
+    }
+}
+
+#address{
+    margin-top: 18px;
+    &::placeholder{
+        width: 148px;
+        @include commun;
+        @include placeholder;
+    }
+}
+
+label[for=address_label]{
+    width: 72px;
+    @include label;
+    @include commun;
+}
+
+input{
+    &[type=text]{
+        border: none;
+        border-bottom: 1px solid $color_4;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        line-height: 15px;
+        margin-left: 139px;
+    }
+    &:focus{
+        background-color: none;
+        color: $color_1;
+    }
+    &.submit:hover{
+        background-color: $color_2;
+    }
+    &[type=text]:hover{
+        border-bottom: 1px solid $color_1;
+    }
+    &[type=text]:focus{
+        border-bottom: 1px solid $color_1;
+    }
+}
+
+.submit{
+    margin-top: 30px;
+    width: 168px;
+    padding-top: 12px;
+    padding-left: 56px;
+    padding-right: 56px;
+    padding-bottom: 12px;
+    border: none;
+    background-color: $background-color_2;
+    line-height: 22px;
+    @include label;
+    @include commun;
+    font-weight: 600;
+    height: 45px;
+}
+
+.img2{
+    height: 768px;
+    width:583px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.container{
+    width: 1366px;
+    height:768px;
+    display: flex;
+    justify-content: space-between;  
+}
+
+#fname_error , #lname_error , #email_error , #address_error{
+    color: $color_3;
+    font-family: $font-family_2;
+    font-size: 12px;
+    line-height: 24px;
+    height: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    @include commun;
+    margin-left: 464px;
+}
+
+
+
+
